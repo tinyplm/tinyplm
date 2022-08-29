@@ -1,0 +1,44 @@
+version: "3.9"
+services:
+
+  app-ui:
+    container_name: app-ui
+    build: ./app-ui/Dockerfile.ui
+    ports:
+      - 8080:8080
+    depends_on:
+      - api_service
+    networks:
+      - app-network
+
+  api_service:
+    image: api-service
+    container_name: api-service-app
+    build: ./api-service/Dockerfile.api
+    restart: always
+    ports:
+      - 9000:9000
+    depends_on:
+      - mongo_db
+      - redis_cache
+    networks:
+      - app-network
+
+  mongo_db:
+    image: mongo:6.0.1
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+        - "mongodata:/data/db"
+    networks:
+      - app-network
+
+  redis_cache:
+    container_name: redis_cache
+    image: redis:latest
+    ports:
+      - 6379:6379
+    restart: always
+    networks:
+      - app-network
