@@ -12,17 +12,18 @@ COPY go.sum .
 RUN go mod download
 
 COPY . .
-RUN go build -o ./app ./src/main.go
+RUN go build -o ./app ./main.go
 
 FROM alpine:latest
-
-RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
 
 RUN mkdir -p /api
 WORKDIR /api
 COPY --from=builder /api/app .
-COPY --from=builder /api/test.db .
 
 EXPOSE 9000
 
 ENTRYPOINT ["./app"]
+
+# docker build -t api-service .
+# docker run -d -p 9000:9000 api-service
+

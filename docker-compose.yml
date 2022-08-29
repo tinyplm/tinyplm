@@ -3,7 +3,7 @@ services:
 
   app-ui:
     container_name: app-ui
-    build: ./app-ui/Dockerfile.ui
+    build: ./app-ui/Dockerfile
     ports:
       - 8080:8080
     depends_on:
@@ -14,7 +14,7 @@ services:
   api_service:
     image: api-service
     container_name: api-service-app
-    build: ./api-service/Dockerfile.api
+    build: ./api-service/Dockerfile
     restart: always
     ports:
       - 9000:9000
@@ -25,7 +25,7 @@ services:
       - app-network
 
   mongo_db:
-    image: mongo:6.0.1
+    image: mongo:focal
     restart: always
     ports:
       - 27017:27017
