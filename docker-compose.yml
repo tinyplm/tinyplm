@@ -3,9 +3,9 @@ services:
 
   app-ui:
     container_name: app-ui
-    build: ./app-ui/Dockerfile
+    build: ./app-ui/.
     ports:
-      - 8080:8080
+      - 8080:80
     depends_on:
       - api_service
     networks:
@@ -14,7 +14,7 @@ services:
   api_service:
     image: api-service
     container_name: api-service-app
-    build: ./api-service/Dockerfile
+    build: ./api-service/.
     restart: always
     ports:
       - 9000:9000
@@ -26,11 +26,11 @@ services:
 
   mongo_db:
     image: mongo:focal
-    restart: always
+    restart: unless-stopped
     ports:
       - 27017:27017
     volumes:
-        - "mongodata:/data/db"
+        - "mongodb:/data/db"
     networks:
       - app-network
 
@@ -39,6 +39,13 @@ services:
     image: redis:latest
     ports:
       - 6379:6379
-    restart: always
+    restart: unless-stopped
     networks:
       - app-network
+
+volumes:
+  mongodb:
+
+networks:
+  app-network:
+    driver: bridge
