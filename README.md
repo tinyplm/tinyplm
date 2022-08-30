@@ -1,6 +1,9 @@
 # tinyplm
 Lightweight Cloud Native PLM Running with MongoDB, Redis, Go, React
 
+![Screenshot 2022-08-30 at 10 46 04 AM](https://user-images.githubusercontent.com/741952/187355727-9f739fab-3f45-4846-8759-b01e04bfabd7.png)
+
+
 ### Commands
 
     # start detached
