@@ -26,6 +26,9 @@ services:
 
   mongo_db:
     image: mongo:focal
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: helpdev
+      MONGO_INITDB_ROOT_PASSWORD: 123456
     restart: unless-stopped
     ports:
       - 27017:27017
