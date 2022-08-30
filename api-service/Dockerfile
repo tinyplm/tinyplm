@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 RUN go build -o ./app ./main.go
 
-FROM alpine:latest
+FROM gcr.io/distroless/static-debian11
 
 RUN mkdir -p /api
 WORKDIR /api
