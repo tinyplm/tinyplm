@@ -20,3 +20,20 @@ Lightweight Cloud Native PLM Running with MongoDB, Redis, Go, React
 
     # Down and remove images
     docker-compose down --rmi <all|local> 
+
+
+| Feature      | Description | GitHub Link     |
+| :---        |    :----:   |          ---: |
+| Config Mgmt      | Title       | Here's this   |
+| Database   | Text        | And more      |
+| Redis Cache   | Text        | And more      |
+| Validation   | Text        | And more      |
+| Health Check   | Text        | And more      |
+| Readiness   | Text        | And more      |
+| Liveliness   | Text        | And more      |
+| Prometheus   | Text        | And more      |
+| Open API 3   | Text        | And more      |
+| CORS   | Text        | And more      |
+| JWT Auth   | Text        | And more      |
+| Graceful Shutdown   | Text        | And more      |
+| Logging   | Text        | And more      |
