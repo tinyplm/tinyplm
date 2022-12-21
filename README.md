@@ -24,16 +24,24 @@ Lightweight Cloud Native PLM Running with MongoDB, Redis, Go, React
 
 | Feature      | Description | GitHub Link     |
 | :---        |    :----:   |          ---: |
-| Config Mgmt      | Title       | Here's this   |
-| Database   | Text        | And more      |
-| Redis Cache   | Text        | And more      |
-| Validation   | Text        | And more      |
-| Health Check   | Text        | And more      |
+| Rest API   | Text        | https://github.com/gin-gonic/gin     |
+| Config Mgmt      | Title       | https://github.com/spf13/viper  |
+| Database   | Text        | https://github.com/mongodb/mongo-go-driver      |
+| Redis Cache   | Text        | https://github.com/go-redis/redis      |
+| Validation   | Text        | https://github.com/go-playground/validator      |
+| Health Check   | Text        | https://codewithyury.com/how-to-create-health-check-for-restful-microservice-in-golang/      |
 | Readiness   | Text        | And more      |
 | Liveliness   | Text        | And more      |
-| Prometheus   | Text        | And more      |
+| Prometheus   | Text        | https://github.com/penglongli/gin-metrics      |
 | Open API 3   | Text        | And more      |
 | CORS   | Text        | And more      |
 | JWT Auth   | Text        | And more      |
 | Graceful Shutdown   | Text        | And more      |
 | Logging   | Text        | And more      |
+
+
+Explore
+    
+    https://github.com/memphisdev/memphis-broker
+    nats
+
